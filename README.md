@@ -113,6 +113,34 @@ yarn clasp undeploy xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 yarn clasp deployments
 ```
 
+## Дерево папок и файлов
+
+```bash
+sudo apt update && sudo apt install tree
+tree --charset ascii -a -I ".git|node_modules"
+```
+
+```bash
+.
+|-- .clasp.json             # настройки Google clasp
+|-- .gitignore              # что игнорировать Git
+|-- LICENSE                 # лицензия репозитория
+|-- Makefile                # файл со скриптами
+|-- package.json            # файл с зависимостями npm пакетов
+|-- .prettierignore         # какие файлы игнорировать Prettier
+|-- .prettierrc.json        # настройки Prettier
+|-- README_bash_histoty.md  # история команд
+|-- README.md               # файл обязательный для прочтения
+|-- src                     # папка с кодом для Google Apps Script
+|   |-- appsscript.json     # настройки Google Apps Script
+|   |-- Code.ts             # файл с кодом Type Script, который станет Google Script
+|   |-- env.html            # файл секретов, который попадет на Google Apps Script (игнорируется Git'ом)
+|   `-- env.html.example    # копия файла секретов (не игнорируется Git'ом)
+`-- yarn.lock               # пакеты для установки yarn
+
+1 directory, 14 files
+```
+
 ## Список использованных источников
 
 1. Apps Script: Google CLASP (Command Line Apps Script Project) NEW TOOL - YouTube [Electronic resource]
